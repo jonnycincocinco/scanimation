@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Scanimation</title>
+<style>
+img { position: absolute; }
+body { background-color: black; }
+#controls { position: absolute; right: 0px; }
+</style>
+<script src="js/main.js"></script>
+</head>
+<body>
+<div id="scanimation"></div>
+<div id="controls">
+<div><button onclick="document.body.style.backgroundColor = colors[colorNum++%colors.length];">Color</button></div>
+<div><button onclick="animFrames = anims[animNum++%anims.length]; init(); setTimeout(init, 1000);">Animation</button></div>
+<div><button onclick="numStripsPerImage = numStripsChoices[numStripsChoicesNum++%numStripsChoices.length]; init()">Strips</button></div>
+<div><button onclick="drawFrame(0, true)">Show</button></div>
+<div><button onclick="drawGrid()">Grid</button></div>
+<div><button onclick="init()">Init</button></div>
+</div>
+<!--<div style="position: absolute; top: 50px; width: 1000; height: 500; background-color: white;"></div>-->
+</body>
+</html>
